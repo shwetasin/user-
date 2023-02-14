@@ -1,0 +1,7 @@
+{
+  "name": "UserApi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
