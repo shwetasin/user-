@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><b>Quotes Details</b></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" icon="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-text>
+        <h4><b>{{quotesList.quote}}</b></h4>
+      </ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text><b>By:{{quotesList.author}}</b></ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

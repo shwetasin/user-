@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>CreateUser</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" icon="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit(createForm.value)">
+    <ion-item>
+      <ion-label> <b> firstName:</b> </ion-label>
+      <ion-input type="text" required formControlName="firstName" class="form-control"
+        placeholder=" Enter name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> <b> lastName:</b> </ion-label>
+      <ion-input type="text" required formControlName="lastName" class="form-control"
+        placeholder="Enter last"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label> <b> age:</b> </ion-label>
+      <ion-input type="text" required formControlName="age" class="form-control"
+        placeholder="Enter age"></ion-input>
+    </ion-item>
+    <div class="ion-text-center " style="margin-top:20px">
+      <ion-button size="large" type="submit"><b>Submit</b></ion-button>
+    </div>
+  </form>
+</ion-content>

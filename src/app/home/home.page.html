@@ -1,20 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      <b>Home</b>
     </ion-title>
+    <ion-buttons slot="end" (click)="Logout()">
+      <ion-button type="Logout"><b>Logout</b></ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card (click)="routeclick(quote)"*ngFor="let quote of quotesList">
+    <ion-card-header>
+      <ion-text>
+        <h4><b>{{quote.quote}}</b></h4>
+      </ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text> <b>By:{{quote.author}}</b></ion-text>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

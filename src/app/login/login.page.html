@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" icon="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <ion-item>
+      <ion-label> <b> username:</b> </ion-label>
+      <ion-input type="text" required formControlName="username" class="form-control"
+        placeholder=" Enter username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> <b> password:</b> </ion-label>
+      <ion-input type="text" required formControlName="password" class="form-control"
+        placeholder="Enter password"></ion-input>
+    </ion-item>
+    <div class="ion-text-center " style="margin-top:20px">
+      <ion-button size="large" type="submit"><b>Submit</b></ion-button>
+    </div>
+    <div class="ion-text-center " style="margin-top:20px">
+      <ion-button [routerLink]="['/create-user']" fill="clear" (click)="Signup()"> Not Have a Account |
+        <b>Signup</b></ion-button>
+    </div>
+    <div class="ion-text-center " style="margin-top:20px">
+      <ion-button [routerLink]="['/addpost/:userId']"fill="clear" (click)="Signup()"> 
+        <b>Add a Post </b></ion-button>
+    </div>
+  </form>
+</ion-content>
